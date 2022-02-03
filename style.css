@@ -1,0 +1,160 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Outfit', sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+:root {
+	--soft-blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+	--main-bg: hsl(217, 54%, 11%);
+	--card-bg: hsl(216, 54%, 16%);
+	--line: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+
+	background-color: var(--main-bg);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	background-color: var(--card-bg);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	height: 90vh;
+	width: 20vw;
+
+	padding: 1rem;
+
+	border-radius: 1rem;
+
+	overflow: hidden;
+}
+
+.card__image {
+	position: relative;
+	height: 60%;
+}
+.card__view {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 44%;
+	left: 42%;
+	display: none;
+}
+.card__img {
+	height: 100%;
+	width: 100%;
+
+	border-radius: 5%;
+}
+.card__img:hover {
+	filter: hue-rotate(350deg);
+	filter: brightness(110%);
+	filter: saturation(200%);
+}
+
+.card__title h1 {
+	margin-top: 1rem;
+
+	color: var(--white);
+	font-weight: 700;
+	font-size: 18px;
+}
+.card__title h1:hover {
+	color: var(--cyan);
+}
+
+.card__description p {
+	margin-top: 1rem;
+
+	color: var(--soft-blue);
+	font-size: 12px;
+}
+
+.card__data {
+	margin-top: 1rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card__price,
+.card__date {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	color: var(--cyan);
+
+	font-size: 12px;
+}
+
+.card__price img,
+.card__date img {
+	height: 14px;
+}
+.card__date {
+	color: var(--soft-blue);
+}
+
+.card__footer {
+	display: flex;
+	flex-direction: column;
+}
+
+.line {
+	margin: 1rem 0;
+
+	width: 100%;
+	height: 0.1rem;
+
+	background-color: var(--line);
+}
+
+.card__avatar {
+	display: flex;
+	align-items: center;
+	font-size: 0.8rem;
+	gap: 1rem;
+}
+
+.card__avatar img {
+	width: 15%;
+	border-radius: 100%;
+}
+
+.card__avatar h3 {
+	color: var(--soft-blue);
+	letter-spacing: 0.1rem;
+}
+
+.card__avatar a {
+	color: var(--white);
+}
+.card__avatar a:hover {
+	color: var(--cyan);
+}
+
+@media (max-width: 1000px) {
+	.card {
+		width: 90vw;
+		height: auto;
+	}
+	.card__image {
+		height: 40%;
+	}
+}
